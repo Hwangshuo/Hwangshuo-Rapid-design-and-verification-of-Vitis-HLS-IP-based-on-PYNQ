@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1692864559231">
+  <ports id="1" name="a" type="PortType" originalName="a" coreId="1919249519" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="b" type="PortType" originalName="b" coreId="0" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="c" type="PortType" originalName="c" coreId="0" bitwidth="32" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="22" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="24" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="25" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="26" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="29" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@ports.2"/>
+  <edges id="30" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.3"/>
+  <blocks id="19" name="add" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="b_read" lineNumber="1" originalName="b" fileName="add.cpp" fileDirectory=".." coreName="s_axilite" implIndex="UNSUPPORTED" control="auto" coreId="114" contextFuncName="add" bitwidth="32" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="add.cpp" linenumber="1" fileDirectory="/home/hs/scalar_add" functionName="add"/>
+      <dataInputObjs>b</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="a_read" lineNumber="1" originalName="a" fileName="add.cpp" fileDirectory=".." coreName="s_axilite" implIndex="UNSUPPORTED" control="auto" coreId="114" contextFuncName="add" bitwidth="32" opcode="read" m_display="0" m_delay="1.0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="add.cpp" linenumber="1" fileDirectory="/home/hs/scalar_add" functionName="add"/>
+      <dataInputObjs>a</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="add_ln6" lineNumber="6" fileName="add.cpp" fileDirectory=".." rtlName="c" coreName="Adder" implIndex="fabric" control="auto" opType="add" coreId="1" contextFuncName="add" bitwidth="32" opcode="add" m_display="0" m_delay="2.55" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="add.cpp" linenumber="6" fileDirectory="/home/hs/scalar_add" functionName="add"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="c_write_ln6" lineNumber="6" fileName="add.cpp" fileDirectory=".." coreName="s_axilite" implIndex="UNSUPPORTED" control="auto" coreId="114" contextFuncName="add" opcode="write" m_display="0" m_delay="1.0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="add.cpp" linenumber="6" fileDirectory="/home/hs/scalar_add" functionName="add"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>c</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="_ln7" lineNumber="7" fileName="add.cpp" fileDirectory=".." coreId="1769104758" contextFuncName="add" opcode="ret" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="add.cpp" linenumber="7" fileDirectory="/home/hs/scalar_add" functionName="add"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="add.cpp">
+      <validLinenumbers>1</validLinenumbers>
+      <validLinenumbers>6</validLinenumbers>
+      <validLinenumbers>7</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <expressionNodes realName="add_ln6_fu_55">
+    <nodeIds>16</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="a_read_read_fu_42">
+    <nodeIds>15</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln6_write_fu_48">
+    <nodeIds>17</nodeIds>
+  </ioNodes>
+  <ioNodes realName="b_read_read_fu_36">
+    <nodeIds>14</nodeIds>
+  </ioNodes>
+  <ioPorts name="a">
+    <contents name="read">
+      <nodeIds>15</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="b">
+    <contents name="read">
+      <nodeIds>14</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="c">
+    <contents name="write">
+      <nodeIds>17</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+    </states>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="add" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>19</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

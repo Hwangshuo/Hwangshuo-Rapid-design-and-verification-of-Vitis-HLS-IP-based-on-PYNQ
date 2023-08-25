@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="add.cpp" path="/home/hs/PYNQ_z1_Acc/Chapter1_pynq_z1_acc/scalar_add/add.cpp"/>
+    <originFiles name="add.cpp" path="/home/hs/PYNQ_z1_Acc/Chapter1_pynq_z1_acc/scalar_add/add.cpp"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>

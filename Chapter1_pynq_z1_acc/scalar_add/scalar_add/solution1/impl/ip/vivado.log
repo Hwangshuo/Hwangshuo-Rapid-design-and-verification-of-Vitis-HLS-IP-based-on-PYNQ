@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Aug 15 17:12:24 2023
+# Process ID: 1931769
+# Current directory: /home/hs/scalar_add/scalar_add/solution1/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /home/hs/scalar_add/scalar_add/solution1/impl/ip/vivado.log
+# Journal file: /home/hs/scalar_add/scalar_add/solution1/impl/ip/vivado.jou
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+INFO: [Common 17-206] Exiting Vivado at Tue Aug 15 17:12:37 2023...

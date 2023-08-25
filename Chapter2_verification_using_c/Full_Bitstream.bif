@@ -1,0 +1,4 @@
+all:
+{
+    pynq_z1_wrapper.bit /* Bitstream file name */
+}

@@ -1,0 +1,4 @@
+all:
+{
+    rocketchip_wrapper.bit /* Bitstream file name */
+}
